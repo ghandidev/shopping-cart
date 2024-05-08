@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 :root {
@@ -21,12 +22,14 @@
 
 body {
   background-color: var(--dark-grey);
+  overflow: auto;
 }
 
 .title {
   color: var(--light-grey);
   text-align: center;
   margin: 25px 0;
+  text-decoration: overline;
 }
 
 #dessert-card-container {
@@ -42,6 +45,11 @@ body {
   text-align: center;
   border-radius: 15px;
   margin: 20px 10px;
+  transition: 0.6s;
+}
+.dessert-card:hover {
+  transition: 0.4s;
+  scale: 1.05;
 }
 
 .dessert-price {
@@ -57,6 +65,7 @@ body {
   background-image: linear-gradient(var(--golden-yellow), var(--orange));
   border-color: var(--gold);
   border-width: 3px;
+  border-radius: 5px;
 }
 
 .btn:hover {
@@ -65,19 +74,21 @@ body {
 
 #cart-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 40px;
+  right: 60px;
+  width: 120px;
+  height: 30px;
 }
 
 .add-to-cart-btn {
-  margin: 30px auto 10px;
+  margin: 20px auto 10px;
 }
 
 #cart-container {
   display: none;
   position: absolute;
-  top: 60px;
-  right: 0;
+  top: 70px;
+  right: 20px;
   background-color: var(--light-grey);
   width: 200px;
   height: 400px;
@@ -86,6 +97,8 @@ body {
   text-align: center;
   font-size: 1.2rem;
   overflow-y: scroll;
+  opacity: 95%;
+  z-index: 1;
 }
 
 .product {
